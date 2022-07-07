@@ -5,7 +5,7 @@ function deleteMovieAskForConfirmation(movieUUID) {
 }
 
 function deleteMovieConfirmed(movieUUID) {
-    axios.delete('/movies/deleteMovie', {
+    axios.delete('/api/movies/deleteMovie', {
     params: { movieId: movieUUID }
     })
     .then(function (response) {
