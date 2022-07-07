@@ -5,7 +5,7 @@ function deleteUserAskForConfirmation(userUUID) {
 }
 
 function deleteUserConfirmed(userUUID) {
-    axios.delete('/users/deleteUser', {
+    axios.delete('/api/users/deleteUser', {
     params: { userId: userUUID }
     })
     .then(function (response) {
