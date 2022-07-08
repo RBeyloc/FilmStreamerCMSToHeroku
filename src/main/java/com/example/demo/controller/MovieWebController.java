@@ -42,7 +42,7 @@ public class MovieWebController {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         movie.setPosterPath(fileName);
         Movie movieSaved = movieService.createMovie(movie).get();
-        String uploadDir = "/images";
+        String uploadDir = "https://filmstreamercontentmanager.herokuapp.com/images/";
         FileUploadUtil.saveFile(uploadDir, fileName, file);
 
         return "redirect:/movies/movies";
